@@ -1,0 +1,79 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    signingConfigs {
+
+        debug {
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storeFile file('./files/1.keystore/ollehkt_debug.keystore')
+            storePassword 'android'
+        }
+
+        release {
+            keyAlias 'kt corporation'
+            keyPassword 'ollehktwin@'
+            storeFile file('./files/1.keystore/ollehkt_release.keystore')
+            storePassword 'ollehktwin@'
+        }
+
+    }
+
+    defaultConfig {
+        applicationId "com.neighborlib"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            debuggable false
+        }
+        debug {
+            debuggable true
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_6
+        targetCompatibility JavaVersion.VERSION_1_6
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    //        exclude group: 'com.android.support', module: 'support-annotations'
+    //    })
+    compile 'com.android.support:appcompat-v7:25.1.1'
+    compile 'com.android.support:design:25.1.1'
+    compile 'eu.the4thfloor.volley:com.android.volley:2015.05.28'
+    compile 'log4j:log4j:1.2.17'
+    compile 'com.google.firebase:firebase-crash:10.0.1'
+    testCompile 'junit:junit:4.12'
+    compile files('libs/multipart-httpclient-4.2.1.jar')
+    compile files('libs/multipart-httpcore-4.2.1.jar')
+    compile files('libs/multipart-httpmime-4.2.1.jar')
+
+}
+
+
+
+
+apply plugin: 'com.google.gms.google-services'
