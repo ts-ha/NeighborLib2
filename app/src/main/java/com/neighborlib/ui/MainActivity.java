@@ -20,19 +20,20 @@ import com.neighborlib.ui.SmartServiceMessageHandler.SmartServiceHandlerInterfac
 
 import org.apache.log4j.Logger;
 
+import java.io.File;
+
 public class MainActivity extends AppCompatActivity implements SmartServiceHandlerInterface {
 
     static final String TAG = MainActivity.class.getSimpleName();
     private SmartServiceMessageHandler handler = new SmartServiceMessageHandler(this);
+    private String searchFileUrl;
+    private String searchPath;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-
-
-
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -50,7 +51,9 @@ public class MainActivity extends AppCompatActivity implements SmartServiceHandl
 
 
         requestAppMenuSearch();
+
     }
+
 
 
     /**
@@ -104,7 +107,7 @@ public class MainActivity extends AppCompatActivity implements SmartServiceHandl
         int messageWhat = message.what;
         if (messageWhat == MessageDef.API_APP_MENU_SEARCH_SUCCESS) {
             try {
-                Logger.getLogger(TAG).debug("(String) message.obj : " + (String) message.obj);
+                Logger.getLogger(TAG).debug("(String) message.obj : " + message.obj);
             } catch (Exception e) {
                 e.printStackTrace();
             }

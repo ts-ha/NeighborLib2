@@ -373,6 +373,7 @@ public class NetworkManager extends AbsNetworkManager {
                 return headers;
             }
         };
+
         jsObjRequest.setRetryPolicy(new DefaultRetryPolicy(60000, 0, 0));
         jsObjRequest.setTag(NETWORK_REQUEST_TAG);
 

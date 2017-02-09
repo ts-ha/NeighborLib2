@@ -15,10 +15,5 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
-####################################################################
-# log4j
--dontwarn org.slf4j.**
--dontnote org.apache.log4j.**
--dontwarn org.apache.log4j.**
 
-###############################################
+

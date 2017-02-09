@@ -103,7 +103,7 @@ public class SmartServiceMessageHandler extends Handler {
 		 * @param message
 		 *            메시지
 		 */
-		public void handleServiceMessage(Message message);
+		 void handleServiceMessage(Message message);
 	}
 
 	/**
