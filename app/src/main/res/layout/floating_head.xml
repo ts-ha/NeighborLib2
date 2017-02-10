@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2015. Pokevian Ltd.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<com.neighborlib.ui.view.FloatingHeadView
+    android:id="@+id/head"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/floating_head_width"
+    android:layout_height="@dimen/floating_head_height"
+    android:background="@drawable/bg_floating_head">
+
+    <com.neighborlib.ui.view.LogoView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        tools:visibility="visible">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_floating_logo"/>
+    </com.neighborlib.ui.view.LogoView>
+
+    <com.neighborlib.ui.view.NormalView
+        android:id="@+id/normal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00ffffff"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="-2dp">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:includeFontPadding="false"
+                    android:text="@string/fuel_economy"
+                    android:textColor="#ff8d8e8d"
+                    android:textSize="9sp"
+                    tools:text="급가속"
+                    tools:visibility="visible"/>
+
+                <ImageView
+                    android:id="@+id/event"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:src="@drawable/ic_floating_fuel_cut"
+                    android:visibility="invisible"
+                    tools:visibility="invisible"/>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="42dp">
+
+                <LinearLayout
+                    android:id="@+id/value_pane"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:minWidth="60dp"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    tools:visibility="invisible">
+
+                    <TextView
+                        android:id="@+id/value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:includeFontPadding="false"
+                        android:text="@string/head_no_value_exp"
+                        android:textColor="#ff6d6d6e"
+                        android:textSize="26sp"
+                        android:textStyle="bold"
+                        tools:text="110"/>
+
+                    <TextView
+                        android:id="@+id/unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="-2dp"
+                        android:includeFontPadding="false"
+                        android:text="km/L"
+                        android:textColor="#ff8d8e8d"
+                        android:textSize="9sp"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/harsh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    tools:src="@drawable/ic_floating_harsh_accel"/>
+            </FrameLayout>
+        </LinearLayout>
+    </com.neighborlib.ui.view.NormalView>
+
+    <com.neighborlib.ui.view.MilView
+        android:id="@+id/mil"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:visibility="invisible">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_floating_mil"/>
+    </com.neighborlib.ui.view.MilView>
+
+    <com.neighborlib.ui.view.DrivingView
+        android:id="@+id/driving"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_floating_trophy"
+        android:visibility="gone"
+        tools:visibility="invisible">
+
+        <LinearLayout
+            android:id="@+id/eco_safe_point_pane"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/eco_safe_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:includeFontPadding="false"
+                android:text=""
+                android:textColor="#ff6d6d6e"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                tools:text="100"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:includeFontPadding="false"
+                android:text="@string/eco_safe_point_unit"
+                android:textColor="#ff8d8e8d"
+                android:textSize="9sp"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/eco_safe_point_calc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_floating_eco_point_calc"/>
+    </com.neighborlib.ui.view.DrivingView>
+
+    <com.neighborlib.ui.view.TtsView
+        android:id="@+id/tts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_floating_tts"/>
+    </com.neighborlib.ui.view.TtsView>
+
+    <com.neighborlib.ui.view.RejectCallView
+        android:id="@+id/incoming_call"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:visibility="invisible">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_floating_reject_call"/>
+    </com.neighborlib.ui.view.RejectCallView>
+
+    <com.neighborlib.ui.view.SpeakerphoneView
+        android:id="@+id/speakerphone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/speakerphone_toggle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_floating_speaker_on"/>
+    </com.neighborlib.ui.view.SpeakerphoneView>
+
+    <com.neighborlib.ui.view.LoadingView
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:visibility="invisible">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_floating_empty">
+
+            <ProgressBar
+                style="@style/ProgressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+    </com.neighborlib.ui.view.LoadingView>
+
+</com.neighborlib.ui.view.FloatingHeadView>

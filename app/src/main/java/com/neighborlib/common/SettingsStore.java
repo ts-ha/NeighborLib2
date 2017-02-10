@@ -20,6 +20,10 @@ public class SettingsStore {
         }
     }
 
+    public static SettingsStore getInstance() {
+        return mInstance;
+    }
+
     private SettingsStore(Context context) {
         mPrefs = PreferenceManager.getDefaultSharedPreferences(context);
         mContext = context.getApplicationContext();

@@ -3,4 +3,10 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <!-- Floating head -->
+    <dimen name="floating_head_width">78dp</dimen>
+    <dimen name="floating_head_height">78dp</dimen>
+    <dimen name="floating_head_hide_horizontal_offset">39dp</dimen>
+    <dimen name="floating_head_hide_top_offset">30dp</dimen>
+    <dimen name="floating_head_hide_bottom_offset">10dp</dimen>
 </resources>

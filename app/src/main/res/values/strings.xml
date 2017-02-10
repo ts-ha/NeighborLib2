@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">NeighborLib</string>
     <string name="action_settings">Settings</string>
+    <string name="fuel_economy_unit_kpl">km/L</string>
+    <string name="fuel_economy_unit_lp100km">L/100km</string>
+    <string name="fuel_economy_unit_mpg_us">mpg(US)</string>
+    <string name="fuel_economy_unit_mpg_uk">mpg(UK)</string>
+    <string name="instance_fuel_economy">순간 연비</string>
+    <string name="average_fuel_economy">평균 연비</string>
+    <string name="head_no_value_exp">--</string>
+    <string name="eco_safe_point_unit">점</string>
+    <string name="fuel_economy">평균연비</string>
+    <string name="harsh_accel">급가속</string>
+    <string name="harsh_brake">급감속</string>
+    <string name="driving_speed">주행속도</string>
 </resources>
