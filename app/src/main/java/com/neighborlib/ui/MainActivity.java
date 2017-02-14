@@ -71,15 +71,14 @@ public class MainActivity extends AppCompatActivity implements SmartServiceHandl
 
         mHeadWindow.moveTo(mHeadWindow.getLastPosition());
 
-        FirebaseCrash.logcat(Log.ERROR, TAG, "NPE caught");
-        FirebaseCrash.report(new Exception("My first Android non-fatal error"));
+//        FirebaseCrash.logcat(Log.ERROR, TAG, "NPE caught");
+//        FirebaseCrash.report(new Exception("My first Android non-fatal error"));
     }
 
     @Override
     protected void onDestroy() {
         destroyWindows();
         super.onDestroy();
-
     }
 
     private void destroyWindows() {
