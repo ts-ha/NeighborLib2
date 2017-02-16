@@ -11,4 +11,4 @@
 안드로이드 해상도 dim <br>
 https://docs.google.com/spreadsheets/d/1wvq3cTVkDMZeyniygKUoknrRofjMXmsT4wwJyE66rSU/edit
 
-패키지(ttps://github.com/ts-ha/NeighborLib2/blob/master/app/captures/pakage.PNG)
+![패키지이미지](https://github.com/ts-ha/NeighborLib2/blob/master/app/captures/pakage.PNG)
