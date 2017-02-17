@@ -7,6 +7,9 @@ import com.google.android.gms.analytics.Tracker;
 import com.google.firebase.crash.FirebaseCrash;
 import com.neighborlib.common.SettingsStore;
 import com.neighborlib.util.LogUtils;
+
+import org.apache.log4j.Logger;
+
 /**
  * Created by ts.ha on 2017-02-07.
  */
@@ -38,6 +41,16 @@ public class AppName extends Application {
                 android.os.Process.killProcess(android.os.Process.myPid());
             }
         });
+    }
+
+    @Override
+    public void onTrimMemory(int level) {
+        super.onTrimMemory(level);
+        if (level == TRIM_MEMORY_COMPLETE) {
+           
+        }else if(level == TRIM_MEMORY_UI_HIDDEN){
+            Logger.getLogger(TAG).debug("TRIM_MEMORY_UI_HIDDEN");
+        }
     }
 
 
