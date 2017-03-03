@@ -41,4 +41,4 @@ com.futurice.project
 
 아이콘 요청은 512 * 512 좌우 여백 없이 신천후 android studio 에서 제작
 
-![android best practies]https://github.com/futurice/android-best-practices/blob/master/translations/Korean/README.ko.md
+![android_best_practies](https://github.com/futurice/android-best-practices/blob/master/translations/Korean/README.ko.md)
